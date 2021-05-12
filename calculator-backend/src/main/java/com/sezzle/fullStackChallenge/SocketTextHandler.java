@@ -14,26 +14,24 @@ public class SocketTextHandler extends TextWebSocketHandler {
 	
 	private List<WebSocketSession> sessionList = new ArrayList<WebSocketSession>();
 	
-    @Override
-    public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-        sessionList.add(session);
-        System.out.println("Hello");
-    }
+	@Override
+	public void afterConnectionEstablished(WebSocketSession session) throws Exception {
+		sessionList.add(session);
+	}
 
 	@Override
 	public void handleTextMessage(WebSocketSession session, TextMessage message)
 			throws InterruptedException, IOException {
-		 System.out.println("handling message here");
-		 try {
-			 String payload = message.getPayload();
-			 // Broadcast
-			 for (WebSocketSession savedSession: sessionList) {
-				 savedSession.sendMessage(new TextMessage(payload));
-			 }
-		 }
-		 catch(Exception e) {
-			 e.printStackTrace();
-		 }
+		try {
+			String payload = message.getPayload();
+			// Broadcast
+			for (WebSocketSession savedSession: sessionList) {
+				savedSession.sendMessage(new TextMessage(payload));
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@Override
