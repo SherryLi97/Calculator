@@ -1,0 +1,44 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: 'row';
+  height: 100vh;
+  width: 100%;
+}
+
+.calculator-wrapper {
+
+  width: 400px;
+  height: 600px;
+  margin-right: 10px;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.displayToAll {
+  width: 400px;
+  height: 600px;
+  margin-left: 10px;
+  background-color: #e0e1e6;
+  outline: 1px solid #888;
+}
+
+.history {
+  font-weight: bold;
+  font-size: 1.6em;
+  padding-left: 1em;
+  padding-top: 0.5em;
+}
+
+.res {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.4em;
+  padding: 0.5em;
+}
