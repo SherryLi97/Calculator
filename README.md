@@ -8,6 +8,7 @@ This calculator application can share calculation results with everyone connecte
 
 You can find the demo here: http://ec2-34-216-22-62.us-west-2.compute.amazonaws.com:5000/.
 
+![image](https://user-images.githubusercontent.com/55163314/117945354-183dc400-b2c3-11eb-93f4-ee9a48a18eb1.png)
   
 
 ## Running the Application Locally
